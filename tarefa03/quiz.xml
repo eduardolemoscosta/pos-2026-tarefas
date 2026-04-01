@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+
+<quiz versao="1.0">
+    <disciplina>autoria web</disciplina>
+    <professor>
+        <nome>Pedrina celia</nome>
+        <matrícula>123456789</matrícula>
+    </professor>
+    <turma>2º Ano - Informática</turma>
+    <data>01/04/2026</data>
+
+    <questões>
+        <questão>
+            <enunciado>Qual tag é usada para criar uma lista não ordenada em HTML?</enunciado>
+            <pontuação>2.0</pontuação>
+            <alternativas>
+                <alternativa correta="nao">&lt;ol&gt;</alternativa>
+                <alternativa correta="sim">&lt;ul&gt;</alternativa>
+                <alternativa correta="nao">&lt;li&gt;</alternativa>
+                <alternativa correta="nao">&lt;list&gt;</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>O que significa a sigla XML?</enunciado>
+            <pontuação>2.0</pontuação>
+            <alternativas>
+                <alternativa correta="sim">eXtensible Markup Language</alternativa>
+                <alternativa correta="nao">eXecutable Multiple Language</alternativa>
+                <alternativa correta="nao">eXtra Modern Link</alternativa>
+                <alternativa correta="nao">eXamine Multiple Language</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>Qual símbolo é usado para IDs no CSS?</enunciado>
+            <pontuação>2.0</pontuação>
+            <alternativas>
+                <alternativa correta="nao">.</alternativa>
+                <alternativa correta="sim">#</alternativa>
+                <alternativa correta="nao">*</alternativa>
+                <alternativa correta="nao">@</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>Qual propriedade CSS altera a cor do texto?</enunciado>
+            <pontuação>2.0</pontuação>
+            <alternativas>
+                <alternativa correta="nao">background-color</alternativa>
+                <alternativa correta="sim">color</alternativa>
+                <alternativa correta="nao">text-style</alternativa>
+                <alternativa correta="nao">font-color</alternativa>
+            </alternativas>
+        </questão>
+
+        <questão>
+            <enunciado>Em XML, o DTD serve para:</enunciado>
+            <pontuação>2.0</pontuação>
+            <alternativas>
+                <alternativa correta="nao">Estilizar a página</alternativa>
+                <alternativa correta="nao">Conectar ao banco de dados</alternativa>
+                <alternativa correta="sim">Definir a estrutura e regras do documento</alternativa>
+                <alternativa correta="nao">Criar funções matemáticas</alternativa>
+            </alternativas>
+        </questão>
+    </questões>
+</quiz>
