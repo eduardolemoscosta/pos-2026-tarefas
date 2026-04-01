@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE imobiliaria [
+    <!ELEMENT imobiliaria (imovel+)>
+    <!ELEMENT imovel (descricao, proprietario, endereco, caracteristicas, valor)>
+    
+    <!ELEMENT proprietario (nome, (email | telefone)+)>
+    <!ELEMENT nome (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT telefone (#PCDATA)>
+    
+    <!ELEMENT endereco (rua, bairro, cidade, numero?)>
+    <!ELEMENT rua (#PCDATA)>
+    <!ELEMENT bairro (#PCDATA)>
+    <!ELEMENT cidade (#PCDATA)>
+    <!ELEMENT numero (#PCDATA)>
+    
+    <!ELEMENT caracteristicas (tamanho, numQuartos, numBanheiros)>
+    <!ELEMENT tamanho (#PCDATA)>
+    <!ELEMENT numQuartos (#PCDATA)>
+    <!ELEMENT numBanheiros (#PCDATA)>
+    <!ELEMENT descricao (#PCDATA)>
+    <!ELEMENT valor (#PCDATA)>
+]>
+
+<imobiliaria>
+    <imovel>
+        <descricao>Apartamento Garden de Luxo</descricao>
+        <proprietario>
+            <nome>Carlos Lemos</nome>
+            <telefone>(11) 98888-7777</telefone>
+            <telefone>(11) 3333-4444</telefone>
+            <email>carlos.lemos@email.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Avenida Paulista</rua>
+            <bairro>Bela Vista</bairro>
+            <cidade>São Paulo</cidade>
+            <numero>1000</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>120m2</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>2</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 1.243.900,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Casa de Campo Conchegante</descricao>
+        <proprietario>
+            <nome>Ana Souza</nome>
+            <telefone>(15) 97777-6666</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Estrada das Flores</rua>
+            <bairro>Recanto Verde</bairro>
+            <cidade>São Roque</cidade>
+            <numero>s/n</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>250m2</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>3</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 850.000,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Terreno Industrial Plano</descricao>
+        <proprietario>
+            <nome>Logística S.A.</nome>
+            <email>contato@logistica.com.br</email>
+        </proprietario>
+        <endereco>
+            <rua>Rodovia BR-116</rua>
+            <bairro>Distrito Industrial</bairro>
+            <cidade>Curitiba</cidade>
+            </endereco>
+        <caracteristicas>
+            <tamanho>2000m2</tamanho>
+            <numQuartos>0</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 2.509.000,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Studio Moderno</descricao>
+        <proprietario>
+            <nome>Igor Araujo</nome>
+            <email>igor.araujo@web.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Rua dos Inválidos</rua>
+            <bairro>Lapa</bairro>
+            <cidade>Rio de Janeiro</cidade>
+            <numero>45</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>35m2</tamanho>
+            <numQuartos>1</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 320.080,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Sobrado em Condomínio</descricao>
+        <proprietario>
+            <nome>Luiz Silva</nome>
+            <telefone>(21) 99999-0000</telefone>
+            <email>L.Silva@provider.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Alameda das Garças</rua>
+            <bairro>Barra da Tijuca</bairro>
+            <cidade>Rio de Janeiro</cidade>
+            <numero>150</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>180m2</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 1.499.888,00</valor>
+    </imovel>
+</imobiliaria>

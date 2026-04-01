@@ -21,7 +21,7 @@
             <ingrediente>Goma</ingrediente>
             <ingrediente>Ovo Frito</ingrediente>
         </ingredientes>
-        <preco moeda="USD">&dolares; 9,00</preco>
+        <preco moeda="USD">dolar; 9,00</preco>
         <calorias>240</calorias>
         <tempoPreparo>7 min</tempoPreparo>
     </prato>
