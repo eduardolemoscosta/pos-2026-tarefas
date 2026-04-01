@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cardapio SYSTEM "definicoes.dtd">
+<cardapio>
+
+    <prato id="P001">
+        <nome>Café Com Leite</nome>
+        <descricao>A dupla perfeita: cremosidade e energia em cada gole.</descricao>
+        <ingredientes>
+            <ingrediente>Café</ingrediente>
+            <ingrediente>Leite</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL">&reais; 5,00</preco>
+        <calorias>65</calorias>
+        <tempoPreparo>2 min</tempoPreparo>
+
+    </prato>
+    <prato id="P002">
+        <nome>Tapioca Com Ovo</nome>
+        <descricao>Saborosa, sem glúten e com a cremosidade do ovo mexido</descricao>
+        <ingredientes>
+            <ingrediente>Goma</ingrediente>
+            <ingrediente>Ovo Frito</ingrediente>
+        </ingredientes>
+        <preco moeda="USD">&dolares; 9,00</preco>
+        <calorias>240</calorias>
+        <tempoPreparo>7 min</tempoPreparo>
+    </prato>
+    <prato id="P003">
+        <nome>Cuscuz com Queijo</nome>
+        <descricao>O clássico nordestino: milho cozido no vapor com queijo coalho derretido</descricao>
+        <ingredientes>
+            <ingrediente>Flocão de Milho</ingrediente>
+            <ingrediente>Queijo Coalho</ingrediente>
+            <ingrediente>Manteiga</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL"> 12,00</preco>
+        <calorias>310</calorias>
+        <tempoPreparo>15 min</tempoPreparo>
+    </prato>
+
+    <prato id="P004">
+        <nome>Pão na Chapa com Requeijão</nome>
+        <descricao>Pão francês crocante com uma camada generosa de requeijão na saída do fogo</descricao>
+        <ingredientes>
+            <ingrediente>Pão Francês</ingrediente>
+            <ingrediente>Manteiga</ingrediente>
+            <ingrediente>Requeijão Cremoso</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL"> 8,50</preco>
+        <calorias>280</calorias>
+        <tempoPreparo>5 min</tempoPreparo>
+    </prato>
+
+    <prato id="P005">
+        <nome>Omelete de Ervas</nome>
+        <descricao>Omelete fofinho com mix de ervas frescas e um toque de parmesão</descricao>
+        <ingredientes>
+            <ingrediente>Dois Ovos</ingrediente>
+            <ingrediente>Salsinha e Cebolinha</ingrediente>
+            <ingrediente>Queijo Parmesão</ingrediente>
+        </ingredientes>
+        <preco moeda="BRL"> 14,00</preco>
+        <calorias>210</calorias>
+        <tempoPreparo>8 min</tempoPreparo>
+    </prato>
+</cardapio>
