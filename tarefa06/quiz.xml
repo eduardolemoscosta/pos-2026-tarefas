@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz versao="1.0" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="quiz.xsd">
+    
+    <disciplina>Desenvolvimento Web</disciplina>
+    
+    <professor>
+        <nome>João Silva</nome>
+        <matrícula>123456</matrícula>
+    </professor>
+    
+    <turma>Sistemas 01</turma>
+    <data>17/04/2026</data>
+    
+    <questões>
+        <questão>
+            <enunciado>O que significa XSD?</enunciado>
+            <pontuação>2.5</pontuação>
+            <alternativas>
+                <alternativa correta="sim">XML Schema Definition</alternativa>
+                <alternativa correta="nao">X-ray Standard Device</alternativa>
+            </alternativas>
+        </questão>
+    </questões>
+
+</quiz>
