@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<imobiliaria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="imobiliaria.xsd">
+
+    <imovel>
+        <descricao>Casa pequena no centro</descricao>
+        <proprietario>
+            <nome>luiz mendes</nome>
+            <email>luiz.mendes@email.com</email>
+            <telefone>(11) 99999-1111</telefone>
+            <telefone>(11) 98888-2222</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua dos bobos</rua>
+            <bairro>Jardim Botânico</bairro>
+            <cidade>São Paulo</cidade>
+            <numero>120</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>250.5</tamanho>
+            <numQuartos>4</numQuartos>
+            <numBanheiros>3</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 850.000,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Terreno plano pronto para construir</descricao>
+        <proprietario>
+            <nome>Ana Paula Souza</nome>
+            <telefone>(21) 97777-3333</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Avenida chumbim</rua>
+            <bairro>Centro</bairro>
+            <cidade>Rio de Janeiro</cidade>
+            </endereco>
+        <caracteristicas>
+            <tamanho>500.0</tamanho>
+            <numQuartos>0</numQuartos>
+            <numBanheiros>0</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 300.000,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Apartamento aconchegante no centro</descricao>
+        <proprietario>
+            <nome>francisco da cunha</nome>
+            <email>francisco.cunha@email.com</email>
+            <telefone>(31) 96666-4444</telefone>
+        </proprietario>
+        <endereco>
+            <rua>Rua dos fernades</rua>
+            <bairro>Centro</bairro>
+            <cidade>Belo Horizonte</cidade>
+            <numero>45</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>65.5</tamanho>
+            <numQuartos>2</numQuartos>
+            <numBanheiros>1</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 350.000,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Cobertura duplex com vista para o mar</descricao>
+        <proprietario>
+            <nome>marinalva lima</nome>
+            <email>marinalva.lima@email.com</email>
+        </proprietario>
+        <endereco>
+            <rua>Avenida </rua>
+            <bairro>Copacabana</bairro>
+            <cidade>Rio de Janeiro</cidade>
+            <numero>1000</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>180.0</tamanho>
+            <numQuartos>3</numQuartos>
+            <numBanheiros>4</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 20.500.000,00</valor>
+    </imovel>
+
+    <imovel>
+        <descricao>Sítio arborizado com lago</descricao>
+        <proprietario>
+            <nome>Jorge Lima</nome>
+            <telefone>(84) 95555-6666</telefone>
+            <telefone>(84) 94444-7777</telefone>
+        </proprietario>
+        <endereco>
+            <rua>rua </rua>
+            <bairro>Zona Rural</bairro>
+            <cidade>Natal</cidade>
+            <numero>12</numero>
+        </endereco>
+        <caracteristicas>
+            <tamanho>2000.0</tamanho>
+            <numQuartos>5</numQuartos>
+            <numBanheiros>3</numBanheiros>
+        </caracteristicas>
+        <valor>R$ 750.000,00</valor>
+    </imovel>
+
+</imobiliaria>
