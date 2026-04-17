@@ -1,0 +1,28 @@
+{
+  "quiz": {
+    "versao": "1.0",
+    "disciplina": "Desenvolvimento Web",
+    "professor": {
+      "nome": "João Silva",
+      "matricula": "123456"
+    },
+    "turma": "Sistemas 01",
+    "data": "17/04/2026",
+    "questoes": [
+      {
+        "enunciado": "O que significa XSD?",
+        "pontuacao": 2.5,
+        "alternativas": [
+          {
+            "texto": "XML Schema Definition",
+            "correta": "sim"
+          },
+          {
+            "texto": "X-ray Standard Device",
+            "correta": "nao"
+          }
+        ]
+      }
+    ]
+  }
+}

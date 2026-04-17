@@ -1,0 +1,20 @@
+{
+  "imobiliaria": {
+    "imoveis": [
+      {
+        "id": "IMOB-01",
+        "tipo": "Casa",
+        "proprietario": {
+          "nome": "Maria Oliveira",
+          "telefone": "(11) 99999-8888"
+        },
+        "endereco": {
+          "rua": "Av. Brasil",
+          "numero": 500,
+          "bairro": "Centro"
+        },
+        "valor": 450000.00
+      }
+    ]
+  }
+}

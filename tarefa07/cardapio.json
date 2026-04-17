@@ -1,0 +1,20 @@
+{
+  "cardapio": {
+    "itens": [
+      {
+        "id": "001",
+        "nome": "Hambúrguer Artesanal",
+        "descricao": "Carne 180g, queijo e pão brioche",
+        "preco": 35.00,
+        "calorias": 600
+      },
+      {
+        "id": "002",
+        "nome": "Suco de Laranja",
+        "descricao": "Natural 300ml",
+        "preco": 12.00,
+        "calorias": 120
+      }
+    ]
+  }
+}
