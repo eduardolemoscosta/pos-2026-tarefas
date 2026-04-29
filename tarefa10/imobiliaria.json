@@ -1,0 +1,117 @@
+{
+    "imobiliaria": {
+        "imoveis": [
+            {
+                "descricao": "Apartamento Garden de Luxo",
+                "proprietario": {
+                    "nome": "Carlos Lemos",
+                    "telefones": [
+                        "(11) 98888-7777",
+                        "(11) 3333-4444"
+                    ],
+                    "emails": [
+                        "carlos.lemos@email.com"
+                    ]
+                },
+                "endereco": {
+                    "rua": "Avenida Paulista",
+                    "bairro": "Bela Vista",
+                    "cidade": "São Paulo",
+                    "numero": "1000"
+                },
+                "caracteristicas": {
+                    "tamanho": "120m2",
+                    "numQuartos": "3",
+                    "numBanheiros": "2"
+                },
+                "valor": "R$ 1.243.900,00"
+            },
+            {
+                "descricao": "Casa de Campo Conchegante",
+                "proprietario": {
+                    "nome": "Ana Souza",
+                    "telefones": [
+                        "(15) 97777-6666"
+                    ]
+                },
+                "endereco": {
+                    "rua": "Estrada das Flores",
+                    "bairro": "Recanto Verde",
+                    "cidade": "São Roque",
+                    "numero": "s/n"
+                },
+                "caracteristicas": {
+                    "tamanho": "250m2",
+                    "numQuartos": "4",
+                    "numBanheiros": "3"
+                },
+                "valor": "R$ 850.000,00"
+            },
+            {
+                "descricao": "Terreno Industrial Plano",
+                "proprietario": {
+                    "nome": "Logística S.A.",
+                    "emails": [
+                        "contato@logistica.com.br"
+                    ]
+                },
+                "endereco": {
+                    "rua": "Rodovia BR-116",
+                    "bairro": "Distrito Industrial",
+                    "cidade": "Curitiba"
+                },
+                "caracteristicas": {
+                    "tamanho": "2000m2",
+                    "numQuartos": "0",
+                    "numBanheiros": "1"
+                },
+                "valor": "R$ 2.509.000,00"
+            },
+            {
+                "descricao": "Studio Moderno",
+                "proprietario": {
+                    "nome": "Igor Araujo",
+                    "emails": [
+                        "igor.araujo@web.com"
+                    ]
+                },
+                "endereco": {
+                    "rua": "Rua dos Inválidos",
+                    "bairro": "Lapa",
+                    "cidade": "Rio de Janeiro",
+                    "numero": "45"
+                },
+                "caracteristicas": {
+                    "tamanho": "35m2",
+                    "numQuartos": "1",
+                    "numBanheiros": "1"
+                },
+                "valor": "R$ 320.080,00"
+            },
+            {
+                "descricao": "Sobrado em Condomínio",
+                "proprietario": {
+                    "nome": "Luiz Silva",
+                    "telefones": [
+                        "(21) 99999-0000"
+                    ],
+                    "emails": [
+                        "L.Silva@provider.com"
+                    ]
+                },
+                "endereco": {
+                    "rua": "Alameda das Garças",
+                    "bairro": "Barra da Tijuca",
+                    "cidade": "Rio de Janeiro",
+                    "numero": "150"
+                },
+                "caracteristicas": {
+                    "tamanho": "180m2",
+                    "numQuartos": "3",
+                    "numBanheiros": "4"
+                },
+                "valor": "R$ 1.499.888,00"
+            }
+        ]
+    }
+}
