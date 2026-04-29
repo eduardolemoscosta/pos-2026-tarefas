@@ -48,6 +48,23 @@ Atividades entregues após o prazo não serão mais aceitas. A data considerada 
 - Siga as instruções do slide;
 - https://dvcirilo-ifrn.github.io/pos/slides/aula09.html#6
 
+### Tarefa 08 - Parser para `cardapio.xml`
+- **Entrega: 30/04/2026**
+- Crie uma pasta chamada `tarefa08`, que deverá conter o arquivo `cardapio.xml` das tarefas anteriores (sem DTD ou XSD), e o arquivo `parse_cardapio.py`, criado na tarefa;
+- Siga as instruções do slide;
+- https://dvcirilo-ifrn.github.io/pos/slides/aula10.html#8
+
+### Tarefa 09 - Conversor XML para JSON
+- **Entrega: 30/04/2026**
+- Crie uma pasta chamada `tarefa09`, que deverá conter o arquivo `imobiliaria.xml` das tarefas anteriores (sem DTD ou XSD), e os arquivos `imobiliaria2json.py` e `imobiliaria.json`, criados na tarefa;
+- Siga as instruções do slide;
+- https://dvcirilo-ifrn.github.io/pos/slides/aula10.html#13
+
+### Tarefa 10 - Parser para `imobiliaria.json`
+- **Entrega: 30/04/2026**
+- Crie uma pasta chamada `tarefa10`, que deverá conter o arquivo `imobiliaria.json` da tarefa anterior, e o arquivo `cli_imobiliaria.py`, criado na tarefa;
+- Siga as instruções do slide;
+- https://dvcirilo-ifrn.github.io/pos/slides/aula10.html#14
 
 ## Unidade 02 (19/05/2026 a 20/07/2026)
 ## Unidade 03 (10/08/2026 a 13/10/2026)
