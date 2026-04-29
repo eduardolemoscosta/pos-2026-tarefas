@@ -9,11 +9,9 @@ def obter_texto(elemento, tag):
         return ""
 
 def main():
-    # Caminho do arquivo XML
     arquivo_xml = 'cardapio.xml'
     
     try:
-        # Faz o parse do arquivo XML
         dom = minidom.parse(arquivo_xml)
     except FileNotFoundError:
         print(f"Erro: O arquivo '{arquivo_xml}' não foi encontrado.")
@@ -22,10 +20,9 @@ def main():
         print(f"Erro ao processar o XML: {e}")
         return
 
-    # Busca todos os elementos <prato>
+
     pratos_nodes = dom.getElementsByTagName("prato")
     
-    # Dicionário para armazenar as informações cacheadas para acesso rápido
     catalogo = {}
     
     for prato in pratos_nodes:
@@ -35,17 +32,14 @@ def main():
         calorias = obter_texto(prato, "calorias")
         tempo_preparo = obter_texto(prato, "tempoPreparo")
         
-        # Extração de Preço e Moeda
         preco_node = prato.getElementsByTagName("preco")[0]
         preco_valor = preco_node.firstChild.nodeValue.strip() if preco_node.firstChild else ""
         moeda = preco_node.getAttribute("moeda")
         preco_formatado = f"{preco_valor} ({moeda})"
         
-        # Extração da lista de Ingredientes
         ingredientes_nodes = prato.getElementsByTagName("ingrediente")
         ingredientes = [node.firstChild.nodeValue.strip() for node in ingredientes_nodes if node.firstChild]
         
-        # Salvando no dicionário
         catalogo[id_prato] = {
             "nome": nome,
             "descricao": descricao,
@@ -55,13 +49,11 @@ def main():
             "tempoPreparo": tempo_preparo
         }
 
-    # Loop de interação com o usuário
     while True:
         print("\n" + "="*35)
         print(" MENU DE PRATOS ".center(35, "="))
         print("="*35)
         
-        # Exibe os IDs e Nomes
         for id_p, info in catalogo.items():
             print(f"[{id_p}] - {info['nome']}")
         print("-" * 35)
