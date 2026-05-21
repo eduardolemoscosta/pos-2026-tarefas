@@ -67,5 +67,12 @@ Atividades entregues após o prazo não serão mais aceitas. A data considerada 
 - https://dvcirilo-ifrn.github.io/pos/slides/aula10.html#14
 
 ## Unidade 02 (19/05/2026 a 20/07/2026)
+
+### Tarefa 11 - CLI + API Wrapper pra JSONPlaceholder
+- **Entrega: 21/05/2026**
+- Crie uma pasta chamada `tarefa11`, que deverá conter os arquivos `cli.py` e `users_wrapper.py`, criados na tarefa;
+- Siga as instruções do slide;
+- https://dvcirilo-ifrn.github.io/pos/slides/aula11.html#24
+  
 ## Unidade 03 (10/08/2026 a 13/10/2026)
 ## Unidade 04 (14/10/2026 a 18/12/2026)
