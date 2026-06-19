@@ -73,6 +73,18 @@ Atividades entregues após o prazo não serão mais aceitas. A data considerada 
 - Crie uma pasta chamada `tarefa11`, que deverá conter os arquivos `cli.py` e `users_wrapper.py`, criados na tarefa;
 - Siga as instruções do slide;
 - https://dvcirilo-ifrn.github.io/pos/slides/aula11.html#24
-  
+
+### Tarefa 12 - Cliente SOAP
+- **Entrega: 11/06/2026**
+- Crie uma pasta chamada `tarefa12`, que deverá conter o arquivo `soap.py`, criado na tarefa;
+- Siga as instruções do slide;
+- https://dvcirilo-ifrn.github.io/pos/slides/aula12.html#9
+
+### Tarefa 13 - Cliente SOAP Zeep
+- **Entrega: 11/06/2026**
+- Crie uma pasta chamada `tarefa13`, que deverá conter o arquivo `soap_zeep.py`, criado na tarefa;
+- Siga as instruções do slide;
+- https://dvcirilo-ifrn.github.io/pos/slides/aula12.html#12
+
 ## Unidade 03 (10/08/2026 a 13/10/2026)
 ## Unidade 04 (14/10/2026 a 18/12/2026)
