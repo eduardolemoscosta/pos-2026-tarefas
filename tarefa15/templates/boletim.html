@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}Boletim - SUAP{% endblock %}
+
+{% block content %}
+<section class="page-header compact">
+    <div>
+        <p class="eyebrow">📊 Boletim Acadêmico</p>
+        <h1>Notas e Frequência</h1>
+        <p style="color: var(--ink-secondary); margin-top: 8px;">
+            {% if boletim.get('count', 0) %}
+                {{ boletim.get('count', 0) }} disciplina(s) encontrada(s) para {{ selected_year }}.{{ selected_period }}
+            {% else %}
+                Nenhuma disciplina encontrada
+            {% endif %}
+        </p>
+    </div>
+
+    <form class="filter-form" method="get" style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 12px; align-items: end;">
+        <label style="display: grid; gap: 6px;">
+            <span style="font-weight: 600; color: var(--ink); font-size: 0.9rem;">📅 Ano Letivo</span>
+            <select name="ano" style="height: 44px; padding: 8px 12px;">
+                {% for year in years %}
+                    <option value="{{ year }}" {% if year == selected_year %}selected{% endif %}>{{ year }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <label style="display: grid; gap: 6px;">
+            <span style="font-weight: 600; color: var(--ink); font-size: 0.9rem;">📌 Período</span>
+            <select name="periodo" style="height: 44px; padding: 8px 12px;">
+                <option value="1" {% if selected_period == '1' %}selected{% endif %}>1º Semestre</option>
+                <option value="2" {% if selected_period == '2' %}selected{% endif %}>2º Semestre</option>
+            </select>
+        </label>
+        <button class="primary-button" type="submit" style="height: 44px; padding: 0 24px;">🔍 Buscar</button>
+    </form>
+</section>
+
+{% if boletim.get('results') and boletim.results|length > 0 %}
+    <!-- Resumo Geral -->
+    <section class="stats-grid" style="margin-top: 24px;">
+        <article style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-color: #93c5fd;">
+            <span style="color: var(--ink);">📚 Disciplinas</span>
+            <strong style="color: var(--primary-dark); font-size: 1.5rem;">{{ boletim.get('count', 0) }}</strong>
+        </article>
+        <article style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); border-color: #86efac;">
+            <span style="color: var(--ink);">✓ Aprovado</span>
+            <strong style="color: #166534; font-size: 1.5rem;">{{ boletim.results|selectattr('situacao', 'equalto', 'Aprovado')|list|length }}</strong>
+        </article>
+        <article style="background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); border-color: #fb923c;">
+            <span style="color: var(--ink);">⚠️ Cursando</span>
+            <strong style="color: #92400e; font-size: 1.5rem;">{{ boletim.results|selectattr('situacao', 'equalto', 'Cursando')|list|length }}</strong>
+        </article>
+        <article style="background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); border-color: #f87171;">
+            <span style="color: var(--ink);">❌ Reprovado</span>
+            <strong style="color: #991b1b; font-size: 1.5rem;">{{ boletim.results|selectattr('situacao', 'equalto', 'Reprovado')|list|length }}</strong>
+        </article>
+    </section>
+
+    <!-- Tabela de Disciplinas -->
+    <section class="panel table-panel" style="margin-top: 28px;">
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr style="background: linear-gradient(135deg, var(--bg-secondary) 0%, #f3f4f6 100%);">
+                        <th style="color: var(--ink); font-weight: 700;">📖 Disciplina</th>
+                        <th style="text-align: center;">E1</th>
+                        <th style="text-align: center;">E2</th>
+                        <th style="text-align: center;">E3</th>
+                        <th style="text-align: center;">E4</th>
+                        <th style="text-align: center;">Final</th>
+                        <th style="text-align: center;">📊 Média</th>
+                        <th style="text-align: center;">Faltas</th>
+                        <th style="text-align: center;">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in boletim.results %}
+                        <tr style="border-bottom: 1px solid var(--border); transition: background 0.2s;">
+                            <td style="padding: 16px; font-weight: 600;">
+                                <strong style="color: var(--primary);">{{ item.get('disciplina', 'N/A') }}</strong>
+                                <br>
+                                <span style="color: var(--ink-secondary); font-size: 0.85rem;">{{ item.get('codigo_diario', '') }}</span>
+                            </td>
+                            <td style="text-align: center; padding: 16px;">
+                                <span style="background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; font-weight: 500;">
+                                    {{ item.get('nota_etapa_1', {}).get('nota') or '-' }}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 16px;">
+                                <span style="background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; font-weight: 500;">
+                                    {{ item.get('nota_etapa_2', {}).get('nota') or '-' }}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 16px;">
+                                <span style="background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; font-weight: 500;">
+                                    {{ item.get('nota_etapa_3', {}).get('nota') or '-' }}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 16px;">
+                                <span style="background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; font-weight: 500;">
+                                    {{ item.get('nota_etapa_4', {}).get('nota') or '-' }}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 16px;">
+                                <span style="background: var(--bg-secondary); padding: 4px 8px; border-radius: 4px; font-weight: 500;">
+                                    {{ item.get('nota_avaliacao_final', {}).get('nota') or '-' }}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 16px; font-weight: 700;">
+                                <span style="color: var(--primary); font-size: 1.1rem;">
+                                    {{ item.get('media_final_disciplina') or item.get('media_disciplina') or '-' }}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 16px;">
+                                {% set faltas = item.get('numero_faltas', 0) %}
+                                <span style="{% if faltas > 10 %}color: var(--danger);{% elif faltas > 5 %}color: var(--warning);{% else %}color: var(--success);{% endif %} font-weight: 600;">
+                                    {{ faltas }}
+                                </span>
+                            </td>
+                            <td style="text-align: center; padding: 16px;">
+                                {% set situacao = item.get('situacao', 'N/A') %}
+                                <span class="status-pill" style="{% if 'Aprovado' in situacao %}background: #dcfce7; color: #166534;{% elif 'Reprovado' in situacao %}background: #fee2e2; color: #991b1b;{% else %}background: #fef3c7; color: #92400e;{% endif %} padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 0.85rem;">
+                                    {{ situacao }}
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="details-row" style="background: var(--bg-secondary);">
+                            <td colspan="9" style="padding: 0;">
+                                <details style="padding: 16px; display: block;">
+                                    <summary style="cursor: pointer; color: var(--primary); font-weight: 700; user-select: none;">
+                                        ▼ Dados completos da API
+                                    </summary>
+                                    <div class="full-data" style="margin-top: 16px; display: grid; gap: 8px; padding-top: 16px; border-top: 1px solid var(--border);">
+                                        {% for key, value in item.items() %}
+                                            {% if key not in ['disciplina', 'codigo_diario', 'situacao'] %}
+                                                <div style="display: grid; grid-template-columns: 150px 1fr; gap: 16px; font-size: 0.9rem;">
+                                                    <span style="font-weight: 600; color: var(--primary);">{{ key }}</span>
+                                                    <code style="background: var(--surface); padding: 8px; border-radius: 4px; overflow-wrap: break-word; white-space: pre-wrap; color: #475569; font-size: 0.85rem;">{{ value }}</code>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </details>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% else %}
+    <!-- Estado Vazio -->
+    <section class="panel" style="margin-top: 28px; padding: 60px 40px; text-align: center; background: linear-gradient(135deg, var(--bg-secondary) 0%, #f1f5f9 100%);">
+        <div style="font-size: 3rem; margin-bottom: 16px;">📭</div>
+        <h2 style="color: var(--ink); margin-bottom: 8px;">Nenhum dado encontrado</h2>
+        <p style="color: var(--ink-secondary); margin-bottom: 24px; font-size: 1rem;">
+            Escolha outro ano ou período para consultar o boletim. Se esta é sua primeira vez, é possível que os dados ainda não estejam disponíveis.
+        </p>
+        <a href="{{ url_for('report_card') }}" class="primary-button" style="display: inline-block; padding: 12px 24px;">
+            ↻ Tentar Novamente
+        </a>
+    </section>
+{% endif %}
+{% endblock %}

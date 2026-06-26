@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Entrar - Cliente SUAP{% endblock %}
+
+{% block content %}
+<section class="login-shell">
+    <div class="intro-panel" style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); color: var(--ink);">
+        <div>
+            <p class="eyebrow" style="color: var(--primary); text-transform: uppercase; font-size: 0.78rem; font-weight: 900; margin: 0 0 10px; ">🎓 Integração Acadêmica</p>
+            <h1>Seu Desempenho Acadêmico em Um Só Lugar</h1>
+            <p class="lead" style="color: var(--ink-secondary); width: min(650px, 100%); font-size: 1.12rem; line-height: 1.7;">
+                Acesse seu perfil completo, consulte notas, acompanhe sua frequência e monitore seu desempenho 
+                com uma interface moderna e intuitiva integrada ao SUAP IFRN.
+            </p>
+
+            <div class="feature-grid" style="margin-top: 32px;">
+                <div style="background: rgba(255, 255, 255, 0.6); border-color: rgba(59, 130, 246, 0.2); padding: 18px; border-radius: 8px;">
+                    <strong style="color: var(--ink);">✓ Perfil Completo</strong>
+                    <span style="margin-top: 8px; display: block; color: var(--ink-secondary);">Dados pessoais, acadêmicos e informações de contato.</span>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.6); border-color: rgba(59, 130, 246, 0.2); padding: 18px; border-radius: 8px;">
+                    <strong style="color: var(--ink);">✓ Boletim Detalhado</strong>
+                    <span style="margin-top: 8px; display: block; color: var(--ink-secondary);">Notas, faltas, médias e situação em todas as disciplinas.</span>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.6); border-color: rgba(59, 130, 246, 0.2); padding: 18px; border-radius: 8px;">
+                    <strong style="color: var(--ink);">✓ Seguro</strong>
+                    <span style="margin-top: 8px; display: block; color: var(--ink-secondary);">Autenticação OAuth segura com suas credenciais SUAP.</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: grid; gap: 12px; color: var(--ink); font-size: 0.9rem;">
+            <p style="margin: 0;">🔒 Dados síncronizados e seguros</p>
+            <p style="margin: 0;">⚡ Carregamento rápido de informações</p>
+            <p style="margin: 0;">📱 Responsivo em todos os dispositivos</p>
+        </div>
+    </div>
+
+    <section class="login-card">
+        <div style="text-align: center;">
+            <h2 style="margin-bottom: 8px; color: var(--ink);">Bem-vindo!</h2>
+            <p style="color: var(--ink-secondary); margin: 0;">Faça login com sua conta SUAP</p>
+        </div>
+
+        <a href="{{ url_for('login') }}" class="primary-button" style="width: 100%; display: grid; place-items: center; gap: 12px; grid-template-columns: auto 1fr; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); text-align: left; font-size: 1rem; min-height: 52px;">
+            <span style="font-size: 1.4rem;">🔐</span>
+            <span>Entrar com SUAP</span>
+        </a>
+
+        <div style="display: grid; gap: 12px; padding-top: 20px; border-top: 1px solid var(--border);">
+            <p class="helper-text" style="text-align: center;">
+                Você será redirecionado para autenticar no portal do SUAP com segurança.
+            </p>
+        </div>
+
+        <div style="background: var(--bg-secondary); padding: 16px; border-radius: 8px; font-size: 0.9rem; line-height: 1.6; color: var(--ink-secondary);">
+            <strong style="color: var(--ink);">ℹ️ Informações</strong>
+            <p style="margin: 8px 0 0 0;">
+                Este aplicativo usa a API oficial do SUAP IFRN. Sua senha não é armazenada e você permanece 
+                autenticado apenas durante sua sessão.
+            </p>
+        </div>
+    </section>
+</section>
+{% endblock %}

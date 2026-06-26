@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Meu Perfil - SUAP{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div>
+        <p class="eyebrow">👤 Seu Perfil</p>
+        <h1>{{ session.get('profile', {}).get('nome') or session.get('student', {}).get('nome') or session.get('username', 'Perfil do Usuário') }}</h1>
+        <p style="color: var(--ink-secondary); margin-top: 8px;">
+            📧 {{ session.get('profile', {}).get('email') or session.get('student', {}).get('email_academico') or session.get('student', {}).get('email_escolar') or 'Email não informado' }}
+        </p>
+    </div>
+    {% if session.get('profile', {}).get('url_foto_75x100') or session.get('profile', {}).get('url_foto') or session.get('student', {}).get('url_foto') %}
+        <img class="hero-avatar" src="{{ session.get('profile', {}).get('url_foto_75x100') or session.get('profile', {}).get('url_foto') or session.get('student', {}).get('url_foto') }}" alt="Avatar">
+    {% endif %}
+</section>
+
+<!-- Informações Acadêmicas Rápidas -->
+<section class="stats-grid" style="margin-top: 24px;">
+    <article style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border-color: #93c5fd;">
+        <span style="color: var(--ink);">📚 Matrícula</span>
+        <strong style="color: var(--primary-dark);">{{ session.get('username', 'N/A') }}</strong>
+    </article>
+    <article style="background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); border-color: #86efac;">
+        <span style="color: var(--ink);">📘 Curso</span>
+        <strong style="color: #166534;">{{ session.get('student', {}).get('curso') or 'N/A' }}</strong>
+    </article>
+    <article style="background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%); border-color: #fde047;">
+        <span style="color: var(--ink);">✓ Situação</span>
+        <strong style="color: #92400e;">{{ session.get('student', {}).get('situacao') or 'N/A' }}</strong>
+    </article>
+    <article style="background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); border-color: #d8b4fe;">
+        <span style="color: var(--ink);">📊 IRA</span>
+        <strong style="color: #6b21a8;">{{ session.get('student', {}).get('ira') or 'N/A' }}</strong>
+    </article>
+</section>
+
+<!-- Dados Pessoais e Acadêmicos -->
+<section class="two-columns" style="margin-top: 28px;">
+    <article class="panel" style="box-shadow: var(--shadow-sm); border-color: var(--border);">
+        <h2 style="border-bottom: 2px solid var(--primary); padding-bottom: 12px; color: var(--primary);">👤 Dados Pessoais</h2>
+        <div class="data-list">
+            {% if session.get('profile') %}
+                {% for key, value in session.get('profile', {}).items() %}
+                    {% if value and key not in ['url_foto', 'url_foto_75x100', 'id'] %}
+                        <div style="display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border);">
+                            <span style="font-weight: 600; color: var(--primary);">{{ key }}</span>
+                            <strong style="color: var(--ink);">
+                                {% if key == 'data_nascimento' %}
+                                    {{ value[:10] if value else 'N/A' }}
+                                {% else %}
+                                    {{ value }}
+                                {% endif %}
+                            </strong>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p style="color: var(--ink-secondary);">Dados não disponíveis</p>
+            {% endif %}
+        </div>
+    </article>
+
+    <article class="panel" style="box-shadow: var(--shadow-sm); border-color: var(--border);">
+        <h2 style="border-bottom: 2px solid var(--secondary); padding-bottom: 12px; color: var(--secondary);">📚 Dados Acadêmicos</h2>
+        <div class="data-list">
+            {% if session.get('student') %}
+                {% for key, value in session.get('student', {}).items() %}
+                    {% if value and key not in ['url_foto', 'url_foto_75x100', 'id', 'nome', 'email_analytisch', 'email_academico', 'email_escolar'] %}
+                        <div style="display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border);">
+                            <span style="font-weight: 600; color: var(--secondary);">{{ key }}</span>
+                            <strong style="color: var(--ink);">{{ value }}</strong>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p style="color: var(--ink-secondary);">Dados não disponíveis</p>
+            {% endif %}
+        </div>
+    </article>
+</section>
+
+<!-- CTA para Boletim -->
+<section style="margin-top: 32px; padding: 24px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); border-radius: 8px; text-align: center; color: white; display: grid; gap: 12px;">
+    <h3 style="margin: 0;">Quer acompanhar suas notas?</h3>
+    <p style="margin: 0; opacity: 0.9;">Acesse o boletim para ver suas notas, frequência e desempenho em cada disciplina.</p>
+    <a href="{{ url_for('report_card') }}" style="display: inline-block; background: white; color: var(--primary); padding: 12px 24px; border-radius: 6px; font-weight: 700; margin-top: 8px;">
+        ➜ Ver Boletim
+    </a>
+</section>
+{% endblock %}
